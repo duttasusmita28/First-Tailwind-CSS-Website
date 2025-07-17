@@ -1,0 +1,23 @@
+{
+  "name": "tailwindcsswebsite",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "tailwindcss -i ./src/input.css -o ./public/style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duttasusmita28/First-Tailwind-CSS-Website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/duttasusmita28/First-Tailwind-CSS-Website/issues"
+  },
+  "homepage": "https://github.com/duttasusmita28/First-Tailwind-CSS-Website#readme",
+  "description": "",
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}
