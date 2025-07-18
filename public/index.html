@@ -5,17 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>First Tailwind CSS Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <nav class="px-4 py-4 bg-purple-400 text-white">
-        <ul class="flex">
-            <li class="mx-5 cursor-pointer">Home</li>
-            <li class="mx-5 cursor-pointer">About</li>
-            <li class="mx-5 cursor-pointer">Contact</li>
-        </ul>
+    <nav class="px-6 py-6 bg-purple-600 text-white">
+        <div class="flex justify-between items-center font-bold">
+            <h3 class=" text-white text-3xl">FoodPlaza</h3>
+            <ul class="flex text-2xl">
+                <li class="mx-5 cursor-pointer">Home</li>
+                <li class="mx-5 cursor-pointer">About</li>
+                <li class="mx-5 cursor-pointer">Contact</li>
+            </ul>
+        </div>
     </nav>
+    <main>
+        <div class="main bg-purple-100 h-96 py-52 pl-9 ">
+            <div class="text-3xl font-mono">
+                The best FOOD in the town...
+            </div>
+            <p class="w-2/3 py-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima deserunt odio ad tenetur culpa 
+                adipisci amet! Quia provident, non officiis obcaecati repudiandae nobis enim nulla quasi at dicta dolores commodi?</p>
+                <div class="my-2">
+                    <button class="bg-stone-600 px-3 py-2 hover:text-white rounded-xl text-slate-950 hover:bg-blue-700 mx-2">
+                        View Menu</button>
+                    <button class="bg-stone-600 px-3 py-2 hover:text-white rounded-xl text-slate-950 hover:bg-blue-700 mx-2">
+                        Order Now</button>
+                </div>
+        </div>
+    </main>
 </body>
 
 </html>
