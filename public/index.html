@@ -10,31 +10,48 @@
 </head>
 
 <body>
-    <nav class="px-6 py-6 bg-purple-600 text-white">
+    <nav class="px-6 py-6 bg-purple-600 text-white dark:bg-gray-900 dark:text-white">
         <div class="flex justify-between items-center font-bold">
             <h3 class=" text-white text-3xl">FoodPlaza</h3>
-            <ul class="flex text-2xl">
-                <li class="mx-5 cursor-pointer">Home</li>
-                <li class="mx-5 cursor-pointer">About</li>
-                <li class="mx-5 cursor-pointer">Contact</li>
-            </ul>
+            <div class="flex items-center">
+                <ul class="flex text-xl">
+                    <li class="mx-5 cursor-pointer hover:text-2xl">Home</li>
+                    <li class="mx-5 cursor-pointer hover:text-2xl">About</li>
+                    <li class="mx-5 cursor-pointer hover:text-2xl">Contact</li>
+                </ul>
+                <button id="toggle-dark"
+                    class="ml-5 px-3 py-1 bg-white text-black rounded hover:bg-gray-300 dark:bg-gray-700 dark:text-white">
+                    Dark Mode</button>
+            </div>
         </div>
     </nav>
     <main>
-        <div class="main bg-purple-100 h-96 py-52 pl-9 ">
+        <div class="main bg-purple-100 dark:bg-gray-800 dark:text-white h-96 py-52 pl-9 ">
             <div class="text-3xl font-mono">
                 The best FOOD in the town...
             </div>
-            <p class="w-2/3 py-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima deserunt odio ad tenetur culpa 
-                adipisci amet! Quia provident, non officiis obcaecati repudiandae nobis enim nulla quasi at dicta dolores commodi?</p>
-                <div class="my-2">
-                    <button class="bg-stone-600 px-3 py-2 hover:text-white rounded-xl text-slate-950 hover:bg-blue-700 mx-2">
-                        View Menu</button>
-                    <button class="bg-stone-600 px-3 py-2 hover:text-white rounded-xl text-slate-950 hover:bg-blue-700 mx-2">
-                        Order Now</button>
-                </div>
+            <p class="w-2/3 py-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima deserunt odio ad
+                tenetur culpa
+                adipisci amet! Quia provident, non officiis obcaecati repudiandae nobis enim nulla quasi at dicta
+                dolores commodi?</p>
+            <div class="my-2">
+                <button
+                    class="bg-stone-600 px-3 py-2 hover:text-white rounded-xl text-slate-950 hover:bg-blue-700 mx-2 hover:border-2 border-white">
+                    View Menu</button>
+                <button
+                    class="bg-stone-600 px-3 py-2 hover:text-white rounded-xl text-slate-950 hover:bg-blue-700 mx-2 hover:border-2 border-white">
+                    Order Now</button>
+            </div>
         </div>
     </main>
+    <script>
+        const toggle = document.getElementById('toggle-dark');
+        const html = document.documentElement;
+
+        toggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+        });
+    </script>
 </body>
 
 </html>
