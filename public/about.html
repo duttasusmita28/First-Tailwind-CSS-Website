@@ -33,7 +33,7 @@
     </nav>
 
     <!-- Main Content -->
-    <main class="pt-32 px-6 max-w-5xl mx-auto dark:bg-gray-900 dark:text-white">
+    <main class="pt-32 px-6 mx-auto dark:bg-gray-900 dark:text-white">
         <!-- Hero -->
         <section class="mb-12 text-center">
             <h1 class="text-4xl font-bold mb-3">Welcome to FoodPlaza 🍽️</h1>
@@ -100,11 +100,12 @@
         </section>
     </main>
 
-     <footer class="text-gray-600 body-font rounded-t-2xl bg-gray-100 dark:bg-gray-900 dark:text-white">
+    <footer class="text-gray-600 body-font rounded-t-2xl bg-gray-100 dark:bg-gray-900 dark:text-white">
         <div
             class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
             <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left md:mt-0 mt-10">
-                <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+                <a
+                    class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900 dark:bg-gray-900 dark:text-white">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
                         stroke-linejoin="round" stroke-width="2"
                         class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
@@ -116,7 +117,9 @@
             </div>
             <div class="flex-grow flex flex-wrap md:pr-20 -mb-10 md:text-left text-center order-first">
                 <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-                    <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+                    <h2
+                        class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3 dark:bg-gray-900 dark:text-white">
+                        CATEGORIES</h2>
                     <nav class="list-none mb-10">
                         <li>
                             <a class="text-gray-600 hover:text-gray-800">First Link</a>
@@ -133,7 +136,9 @@
                     </nav>
                 </div>
                 <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-                    <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+                    <h2
+                        class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3 dark:bg-gray-900 dark:text-white">
+                        CATEGORIES</h2>
                     <nav class="list-none mb-10">
                         <li>
                             <a class="text-gray-600 hover:text-gray-800">First Link</a>
@@ -150,7 +155,9 @@
                     </nav>
                 </div>
                 <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-                    <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+                    <h2
+                        class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3 dark:bg-gray-900 dark:text-white">
+                        CATEGORIES</h2>
                     <nav class="list-none mb-10">
                         <li>
                             <a class="text-gray-600 hover:text-gray-800">First Link</a>
@@ -167,7 +174,9 @@
                     </nav>
                 </div>
                 <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-                    <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+                    <h2
+                        class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3 dark:bg-gray-900 dark:text-white">
+                        CATEGORIES</h2>
                     <nav class="list-none mb-10">
                         <li>
                             <a class="text-gray-600 hover:text-gray-800">First Link</a>
@@ -212,13 +221,26 @@
     </footer>
 
     <script>
-        const toggle = document.getElementById('toggle-dark');
+        const toggleBtn = document.getElementById('toggle-dark');
         const html = document.documentElement;
 
-        toggle.addEventListener('click', () => {
+        // Load saved mode on page load
+        if (localStorage.getItem('theme') === 'dark') {
+            html.classList.add('dark');
+        }
+
+        toggleBtn?.addEventListener('click', () => {
             html.classList.toggle('dark');
+
+            // Save to localStorage
+            if (html.classList.contains('dark')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
         });
     </script>
+
 </body>
 
 </html>
